@@ -24,7 +24,7 @@ RUN curl -O -L https://github.com/actions/runner/releases/download/v${RUNNER_VER
 RUN ./bin/installdependencies.sh
 
 # copy over the start.sh script
-COPY --chmod=0755 start.sh start.sh
+COPY start.sh start.sh
 
 VOLUME ["/gh-action-runner/_work"]
 
