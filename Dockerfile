@@ -26,5 +26,7 @@ RUN ./bin/installdependencies.sh
 # copy over the start.sh script
 COPY --chmod=0755 start.sh start.sh
 
+VOLUME ["/gh-action-runner/_work"]
+
 # set the entrypoint to the start.sh script
 ENTRYPOINT ["tini", "-s", "-g", "--", "./start.sh"]
