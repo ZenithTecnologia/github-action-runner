@@ -5,7 +5,8 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    container_name: github-action-self-hosted
+    deploy:
+      replicas: ${gasf_replicas:-1}
     environment:
       - ORGANIZATION=${gasf_org}
       - ACCESS_TOKEN=${gasf_token}
