@@ -1,7 +1,7 @@
 FROM debian:stable-slim
 
 # set the github runner version
-ARG RUNNER_VERSION="2.296.2"
+ARG RUNNER_VERSION="2.300.2"
 
 WORKDIR /gh-action-runner
 
