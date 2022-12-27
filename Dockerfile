@@ -29,4 +29,5 @@ COPY start.sh /start.sh
 VOLUME ["/gh-action-runner/_work"]
 
 # set the entrypoint to the start.sh script
-ENTRYPOINT ["tini", "-s", "-g", "--", "/bin/bash", "/start.sh"]
+ENTRYPOINT ["tini", "-s", "-g", "--"]
+CMD [ "/start.sh"]
